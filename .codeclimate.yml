@@ -1,0 +1,41 @@
+engines:
+  csslint:
+    enabled: true
+
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - javascript:
+      - php:
+
+  eslint:
+    enabled: true
+
+  fixme:
+    enabled: true
+
+  phpcodesniffer:
+    enabled: true
+    config:
+    	standard: "PSR1,PSR2"
+
+  phpmd:
+    enabled: true
+    config:
+      rulesets: "phpmd-ruleset.xml"
+
+  scss-lint:
+    enabled: true
+
+ratings:
+  paths:
+    - "**.php"
+    - "**.css"
+    - "**.scss"
+    - "**.js"
+
+exclude_paths:
+- "**/bootstrap/**/*"
+- "**/storage/**/*"
+- "**/vendor/**/*"
