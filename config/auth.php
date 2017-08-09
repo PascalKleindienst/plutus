@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => Plutus\User::class,
+            'model' => Plutus\Models\User::class,
         ],
 
         // 'users' => [

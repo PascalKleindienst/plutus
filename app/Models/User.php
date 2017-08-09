@@ -1,6 +1,6 @@
 <?php
 
-namespace Plutus;
+namespace Plutus\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
