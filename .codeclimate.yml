@@ -38,4 +38,5 @@ ratings:
 exclude_paths:
 - "**/bootstrap/**/*"
 - "**/storage/**/*"
+- "**/public/**/*"
 - "**/vendor/**/*"
