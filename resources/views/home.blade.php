@@ -1,16 +1,18 @@
 @extends('layouts.app')
 
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+@section('breadcrumbs')
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+</ol>
+@endsection
 
-                <div class="panel-body">
-                    You are logged in!
-                </div>
-            </div>
+@section('content')
+<div class="animated fadeIn">
+    <div class="card">
+        <div class="card-header">Dashboard</div>
+
+        <div class="card-block">
+            You are logged in!
         </div>
     </div>
 </div>
