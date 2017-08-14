@@ -1,0 +1,8 @@
+// Input groups with feedback
+.input-group {
+    flex-flow: row wrap;
+
+    .form-control-feedback {
+        width: 100%;
+    }
+}

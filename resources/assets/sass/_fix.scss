@@ -1,0 +1,36 @@
+/**
+ * Map bootstrap@3/sass vars to bootstrap@4 so CoreUI works fine
+ */
+
+// Colors
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #868e96;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+$theme-colors: (
+  primary: $brand-primary,
+  secondary: $gray-600,
+  success: $brand-success,
+  info: $brand-info,
+  warning: $brand-warning,
+  danger: $brand-danger,
+  light: $gray-100,
+  dark: $gray-800
+);
+
+// Input paddings
+$input-btn-padding-y: $btn-padding-y;
+$input-btn-padding-x: $btn-padding-x;
+$input-btn-padding-y-sm: $btn-padding-y-sm;
+$input-btn-padding-x-sm: $btn-padding-x-sm;
+$input-btn-padding-y-lg: $btn-padding-y-lg;
+$input-btn-padding-x-lg: $btn-padding-x-lg;
+
+// Grid
+$grid-gutter-width: $grid-gutter-width-base;
