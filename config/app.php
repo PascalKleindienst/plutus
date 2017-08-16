@@ -166,8 +166,9 @@ return [
         /*
          * Package Service Providers...
          */
-         Prettus\Repository\Providers\RepositoryServiceProvider::class,
-         Barryvdh\Debugbar\ServiceProvider::class,
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
+        anlutro\LaravelSettings\ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -228,6 +229,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Setting' => anlutro\LaravelSettings\Facade::class,
     ],
 
 ];
