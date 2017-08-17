@@ -1,0 +1,73 @@
+# ===================================
+#  General Settings Form Fields
+# ===================================
+
+fields:
+    language:
+        label: Language
+        type: dropdown
+        size: half
+        options:
+            en: English
+            de: German
+
+    country:
+        label: Country
+        type: dropdown
+        size: half
+        options:
+            us: USA
+            uk: United Kingdom
+            de: Germany
+
+    date_format:
+        label: Date Format
+        type: dropdown
+        size: half
+        options:
+            d/M/Y: 31/Dec/2017
+            d-M-Y: 31-Dec-2017
+            d/F/Y: 31/December/2017
+            d-F-Y: 31-December-2017
+            M d, Y: Dec 31, 2017
+            F d, Y: December 31, 2017
+            D M d, Y: Sun Dec 31, 2017
+            Y-m-d: "2017-12-31"
+            d-m-Y: "31-12-2017"
+            m/d/Y: 12/31/2017
+            d.m.Y: 31.12.2017
+            d. M. Y: 31. Dec. 2017
+            d. F Y: 31. December 2017
+
+    first_day_of_week:
+        label: First Day of the Week
+        type: dropdown
+        size: half
+        options: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
+
+    currency:
+        label: Currency Symbol
+        size: half
+        default: $
+
+    currency_placement:
+        label: Currency Symbol Placement
+        type: dropdown
+        size: half
+        options:
+            before: Before Amount
+            after: After Amount
+
+    thousands_separator:
+        label: Thousands Separator
+        size: half
+        default: ,
+        attributes:
+            maxlength: 1
+
+    decimal_point:
+        label: Decimal Point
+        size: half
+        default: .
+        attributes:
+            maxlength: 1

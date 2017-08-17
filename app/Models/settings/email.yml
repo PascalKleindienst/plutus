@@ -1,0 +1,96 @@
+# ===================================
+#  Email Settings Form Fields
+# ===================================
+
+fields:
+    #
+    # Email Section
+    #
+    email_section:
+        label: Email Section
+        type: section
+
+    reply_to_mail:
+        label: Reply To Email
+        type: email
+        size: half
+        placeholder: replyTo@your-company.com
+
+    bcc_email:
+        label: BCC Email
+        type: email
+        size: half
+        placeholder: your.name@your-company.com
+
+    attach_invoice:
+        label: Attach Invoice
+        #type: switch
+        type: checkbox
+        default: true
+        comment: Display the content # Comment which is displayed after the checkbox
+
+    email_signature:
+        label: Email Signature
+        #type: editor
+        type: textarea
+
+    #
+    # Invoice Section
+    #
+    invoice_template_section:
+        label: Invoice Template
+        type: section
+
+    invoice_subject_template:
+        label: Subject
+        default: New invoice $invoice from $account
+
+    invoice_body_template:
+        label: Body
+        #type: editor
+        type: textarea
+        default: |
+            $client,
+
+            To view your invoice for $amount, click the link below.
+
+            $viewLink
+
+            $emailSignature
+
+    #
+    # Reminder Section
+    #
+    reminder_template_section:
+        label: Reminder Template
+        type: section
+
+    reminder_send_after:
+        label: Send Reminder after
+        type: number
+        default: 7
+        size: half
+        comment: days after due date
+
+    reminder_send_automatically:
+        type: checkbox
+        default: true
+        comment: Send Automatically
+        size: half
+
+    reminder_subject_template:
+        label: Subject
+        default: "Reminder: Invoice $invoice from $account"
+
+    reminder_body_template:
+        label: body
+        #type: editor
+        type: textarea
+        default: |
+            $client,
+
+            To view your invoice for $amount, click the link below.
+
+            $viewLink
+
+            $emailSignature

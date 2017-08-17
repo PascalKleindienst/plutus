@@ -1,0 +1,80 @@
+# ===================================
+#  Company Details Form Fields
+# ===================================
+
+fields:
+    #
+    # Contact Section
+    #
+    contact_section:
+        label: Contact Section
+        type: section
+
+    company_name:
+        label: Name
+        placeholder: Company Name
+        size: half
+
+    company_website:
+        label: Website
+        placeholder: Company Website
+        size: half
+
+    company_id:
+        label: ID Number
+        placeholder: Company ID Number
+        size: half
+
+    company_vat:
+        label: VAT Number
+        placeholder: Company VAT Number
+        size: half
+
+    company_email:
+        label: Email
+        placeholder: Company Email
+        size: half
+        type: email
+
+    company_logo:
+        label: Logo
+        size: half
+        type: image
+
+    #
+    # Address Section
+    #
+    address_section:
+        label: Adress Section
+        type: section
+
+    company_street:
+        label: Street
+        placeholder: Street
+        size: half
+
+    company_apt:
+        label: Apt/Suite Number
+        placeholder: Apt/Suite Number
+        size: half
+
+    company_city:
+        label: City
+        placeholder: City
+        size: half
+
+    company_state:
+        label: State/Province
+        placeholder: State/Province
+        size: half
+
+    company_postal_code:
+        label: Postal Code
+        placeholder: Postal Code
+        size: half
+
+    company_phone:
+        label: Phone Number
+        placeholder: Company Phone Number
+        size: half
+        type: tel
