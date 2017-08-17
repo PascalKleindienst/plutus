@@ -61,7 +61,29 @@
                     <li class="nav-item">
                         <a class="nav-link" href="index.html"><i class="icon-speedometer"></i> Dashboard <span class="badge badge-primary">NEW</span></a>
                     </li>
-
+                    <li class="nav-title">
+                        Settings
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-settings"></i> Settings</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link nav-hash" href="{{ route('settings') . '#general' }}">
+                                    <i class="icon-settings"></i> General
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-hash" href="{{ route('settings') . '#company' }}">
+                                    <i class="icon-briefcase"></i> Company
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-hash" href="{{ route('settings') . '#email' }}">
+                                    <i class="icon-envelope"></i> Email
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -84,5 +106,6 @@
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="{{ asset('js/app.js') }}"></script>
+    @yield('scripts')
 </body>
 </html>
