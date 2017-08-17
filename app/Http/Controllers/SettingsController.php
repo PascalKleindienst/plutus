@@ -17,7 +17,7 @@ class SettingsController extends Controller
      */
     public function index(FormGenerator $generator, Settings $settings)
     {
-        return view('settings.index', ['generator' => $generator, 'data' => old() + $settings->all()]);
+        return view('settings', ['generator' => $generator, 'data' => old() + $settings->all()]);
     }
 
     /**
