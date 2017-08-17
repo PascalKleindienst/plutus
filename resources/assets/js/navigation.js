@@ -1,9 +1,11 @@
 $(document).ready(($) => {
     let body = $('body');
+    let url = document.location.toString();
+    const showTab = url => $('.nav-pills a[href="#' + url.split('#')[1] + '"]').tab('show');
 
     const resizeBroadcast = () => {
         let timesRun = 0;
-        const interval = setInterval(function(){
+        const interval = setInterval(() => {
             timesRun += 1;
             if (timesRun === 5) {
                 clearInterval(interval);
@@ -13,7 +15,7 @@ $(document).ready(($) => {
     }
 
     // Dropdown Menu
-    $.navigation.on('click', 'a', (e) => {
+    $.navigation.on('click', 'a', function (e) {
         if ($.ajaxLoad) {
             e.preventDefault();
         }
@@ -22,10 +24,24 @@ $(document).ready(($) => {
             $(this).parent().toggleClass('open');
             resizeBroadcast();
         }
-    });    
+
+        if ($(this).hasClass('nav-hash')) {
+            showTab($(this).attr('href'));
+        }
+    });
+
+    /* ---------- Tab navigation ---------- */
+    if (url.match('#')) {
+        showTab(url);
+    }
+
+    // Change hash for page-reload
+    $('.nav-pills a').on('shown.bs.tab', (e) => {
+        window.location.hash = e.target.hash;
+    });
 
     /* ---------- Main Menu Open/Close, Min/Full ---------- */
-    $('.navbar-toggler').click(function(){
+    $('.navbar-toggler').click(function () {
         if ($(this).hasClass('sidebar-toggler')) {
             body.toggleClass('sidebar-hidden');
             resizeBroadcast();

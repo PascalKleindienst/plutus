@@ -5427,10 +5427,12 @@ module.exports = function spread(callback) {
 /* 31 */
 /***/ (function(module, exports) {
 
-var _this = this;
-
 $(document).ready(function ($) {
     var body = $('body');
+    var url = document.location.toString();
+    var showTab = function showTab(url) {
+        return $('.nav-pills a[href="#' + url.split('#')[1] + '"]').tab('show');
+    };
 
     var resizeBroadcast = function resizeBroadcast() {
         var timesRun = 0;
@@ -5449,10 +5451,24 @@ $(document).ready(function ($) {
             e.preventDefault();
         }
 
-        if ($(_this).hasClass('nav-dropdown-toggle')) {
-            $(_this).parent().toggleClass('open');
+        if ($(this).hasClass('nav-dropdown-toggle')) {
+            $(this).parent().toggleClass('open');
             resizeBroadcast();
         }
+
+        if ($(this).hasClass('nav-hash')) {
+            showTab($(this).attr('href'));
+        }
+    });
+
+    /* ---------- Tab navigation ---------- */
+    if (url.match('#')) {
+        showTab(url);
+    }
+
+    // Change hash for page-reload
+    $('.nav-pills a').on('shown.bs.tab', function (e) {
+        window.location.hash = e.target.hash;
     });
 
     /* ---------- Main Menu Open/Close, Min/Full ---------- */
