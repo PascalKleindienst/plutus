@@ -1,5 +1,7 @@
 <?php
 
+use Plutus\Http\Controllers\SettingsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,5 +18,6 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+SettingsController::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
